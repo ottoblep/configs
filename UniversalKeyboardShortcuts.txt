@@ -1,0 +1,28 @@
+Window Navigation
+  Navigation 		       
+  	Super + hjkl 
+  Move Window
+	  Ctrl+Super+hjkl
+  Navigate through Workspaces
+	  Super+PgUp/Down
+  Move Window through Workspaces
+	  Ctrl+Super+PgUp/Down
+  Navigate through Monitors
+	  Shift+Super+hjkl
+  Move Windows through Monitors
+	  Ctrl+Shift+Super+hjkl
+  Toggle Fullscreen
+  	Super + D
+
+  on debian with paperwm: disable all windows key and tiling shortcuts 
+
+VSCode Navigation
+	see json
+
+Launch new Terminal
+	Ctrl + Alt + Plus
+	
+
+For Detailed:
+  https://github.com/paperwm/PaperWM
+  gTile s.h. Settings

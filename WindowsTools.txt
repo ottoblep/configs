@@ -1,0 +1,8 @@
+Tools:
+- WinDirStat
+- WinShaper https://github.com/WPO-Foundation/win-shaper
+- revoSleep
+- dupeGuru/Duplicate Files Finder (Sourceforge)
+- f.lux
+- W10Privacy/W10Debloater
+- Easy Invert https://www.wintools.info/index.php/download#EasyInvert

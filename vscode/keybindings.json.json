@@ -1,0 +1,18 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Switch between Terminal and Code
+    {
+        "key": "ctrl+oem_5",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    // Close current tab
+    {
+      "key": "alt+q",
+      "command": "workbench.action.closeActiveEditor"
+    },
+    // For switching tabs ctrl+tab is default
+    // To launch a new window use the console and 'codium FILE'
+
+    // To switch to a file by name use ctrl+p
+]
