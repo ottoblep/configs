@@ -55,7 +55,7 @@ mkdir ~/.config
 # Keep old bashrc append new
 cp ~/.bashrc /tmp/.bashrc
 cat /tmp/configs/home/.bashrc >> /tmp/.bashrc
-cp -r /tmp/configs/home/* ~
+cp -a /tmp/configs/home/. ~ 
 cp /tmp/.bashrc ~/.bashrc
 rm -rf /tmp/configs
 
