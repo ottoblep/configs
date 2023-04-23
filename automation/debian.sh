@@ -13,13 +13,13 @@ sudo apt upgrade -y
 sudo apt install -y \
 curl \
 git \
-vim-gtk3 \ # Contains clipboard
-zoxide \ # Fuzzy cd
-fzf \ # Fuzzy interactive grep
-snapd \ 
+vim-gtk3 \
+zoxide \
+fzf \
+snapd \
 chromium \
-keepassxc \ # Requires manual setup
-thunderbird \ # Requires manual setup
+keepassxc \
+thunderbird \
 speedcrunch \
 xournalpp \
 yt-dlp \
@@ -27,7 +27,7 @@ yt-dlp \
 sudo snap install codium --classic
 sudo snap install alacritty --classic
 sudo snap install \
-sleek \ # Requires manual setup
+sleek \
 drawio \
 youtube-music-desktop-app \
 
