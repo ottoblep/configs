@@ -4,23 +4,24 @@
 
 LAPTOP_MODE=false
 
+# Fetch configs
+sudo apt install -y git
+git clone https://github.com/ottoblep/configs /tmp/configs
+
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install -y \
-# Essentials
 curl \
 git \
 vim-gtk3 \ # Contains clipboard
 zoxide \ # Fuzzy cd
 fzf \ # Fuzzy interactive grep
 snapd \ 
-# Productivity
 chromium \
 keepassxc \ # Requires manual setup
 thunderbird \ # Requires manual setup
 speedcrunch \
 xournalpp \
-# Bonus
 yt-dlp \
 
 sudo snap install codium --classic
@@ -32,10 +33,8 @@ youtube-music-desktop-app \
 
 # VSCodium Plugins
 codium --install-extension \
-# Essentials
 mhutchie.git-graph \
 vscodevim.vim \
-# Themes
 GulajavaMinistudio.mayukaithemevsc \
 ddiu8081.moegi-theme \
 
@@ -44,8 +43,6 @@ curl https://syncandshare.lrz.de/client_deployment/LRZ_Sync_Share_Latest_amd64.d
 -o /tmp/LRZ_Sync_Share_Latest_amd64.deb
 sudo apt install -y /tmp/LRZ_Sync_Share_Latest_amd64.deb
 
-# Fetch configs
-git clone https://github.com/ottoblep/configs /tmp/configs
 # Import configs
 mkdir ~/.config
 # Keep old bashrc append new
@@ -68,3 +65,8 @@ fi
 # Branch depends on gnome version
 git clone https://github.com/paperwm/PaperWM -b gnome-3.38 ~/.local/PaperWM
 ~/.local/PaperWM/install.sh
+
+# Gnome Shell Extensions
+sudo wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+chmod +x gnome-shell-extension-installer
+sudo mv gnome-shell-extension-installer /usr/bin/
