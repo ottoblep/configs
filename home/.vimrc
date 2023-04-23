@@ -3,3 +3,4 @@ nnoremap ä A✅<Esc>
 nnoremap ü a✅<Esc>
 set noswapfile
 set foldmethod=indent
+set clipboard=unnamedplus, unnamed

@@ -4,7 +4,6 @@ PROGRAMS
 - Gnome
 	- PaperWM
 - VSCodium
-- Matlab
 - LRZ SnS
 - Sleek Todo Manager
 - Keepass
@@ -14,6 +13,8 @@ PROGRAMS
 - Xournal++
 - Drawio
 - Speedcrunch
+
+- Matlab
 
 GNOME EXTENSIONS
 - Hide Top Bar Shell Extension
