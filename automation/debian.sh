@@ -5,8 +5,15 @@
 LAPTOP_MODE=false
 
 # Fetch configs
-sudo apt install -y git
+# sudo apt install -y git
 git clone https://github.com/ottoblep/configs /tmp/configs
+
+# Depends on debian version
+sudo echo "deb http://http.us.debian.org/debian stable contrib non-free" | sudo tee -a /etc/apt/sources.list
+sudo echo "deb-src http://http.us.debian.org/debian stable contrib non-free" | sudo tee -a /etc/apt/sources.list
+sudo echo "deb http://deb.debian.org/debian bullseye-backports main contrib non-free" | sudo tee -a /etc/apt/sources.list
+sudo echo "deb http://deb.debian.org/debian bullseye-security main" | sudo tee -a /etc/apt/sources.list
+sudo echo "deb http://deb.debian.org/debian bullseye-updates main" | sudo tee -a /etc/apt/sources.list
 
 sudo apt update -y
 sudo apt upgrade -y
@@ -20,9 +27,9 @@ snapd \
 chromium \
 keepassxc \
 thunderbird \
-speedcrunch \
 xournalpp \
 yt-dlp \
+speedcrunch \
 
 sudo snap install codium --classic
 sudo snap install alacritty --classic
