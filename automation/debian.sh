@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
-# Needs to run with elevated privileges
 # Setup a debian distro and run this anywhere
 
 LAPTOP_MODE=false
 VM_MODE=true
 
 # Fetch configs
-# sudo apt install -y git
-git clone https://github.com/ottoblep/configs ~/configs
+sudo apt install -y git
+git clone https://github.com/ottoblep/configs ~/configs_tmp
 
 # Depends on debian version
 echo "Updating sources..."
@@ -64,8 +63,8 @@ echo "Importing config..."
 mkdir ~/.config
 # Keep old bashrc append new
 cp ~/.bashrc /tmp/.bashrc
-cat ~/configs/home/.bashrc >> /tmp/.bashrc
-cp -a ~/configs/home/. ~ 
+cat ~/configs_tmp/home/.bashrc >> /tmp/.bashrc
+cp -a ~/configs_tmp/home/. ~ 
 cp /tmp/.bashrc ~/.bashrc
 
 # PGP / SSH Setup
@@ -73,7 +72,7 @@ cp /tmp/.bashrc ~/.bashrc
 if [ "$LAPTOP_MODE" = true ]; then
     # Laptop power settings / TLP
     sudo apt install -y tlp
-    sudo cp ~/configs/etc/tlp.conf /etc/tlp.conf
+    sudo cp ~/configs_tmp/etc/tlp.conf /etc/tlp.conf
     sudo systemctl enable tlp.service
     sudo systemctl start  tlp.service
 fi
@@ -90,4 +89,4 @@ if [ "$VM_MODE" = false ]; then
 fi
 
 echo "Cleaning up..."
-rm -rf ~/configs
+rm -rf ~/configs_tmp
