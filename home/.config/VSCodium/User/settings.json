@@ -1,8 +1,8 @@
 // VSCode Settings file
 {
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.fontSize": 16,
-    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 13,
+    "terminal.integrated.fontSize": 13,
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
