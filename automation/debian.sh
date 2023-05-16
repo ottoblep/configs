@@ -58,16 +58,16 @@ if [ "$VM_MODE" = false ]; then
 fi
 
 
-echo "Importing config..."
+echo "Importing configs..."
 # Import configs
 mkdir ~/.config
-# Keep old bashrc append new
-cp ~/.bashrc /tmp/.bashrc
-cat ~/configs_tmp/home/.bashrc >> /tmp/.bashrc
-cp -a ~/configs_tmp/home/. ~ 
-cp /tmp/.bashrc ~/.bashrc
+# Setup bashrc 
+cp -n ~/.bashrc ~/.bashrc_original
+cp ~/.bashrc_original ~/.bashrc
+cat ~/configs_tmp/home/.bashrc >> ~/.bashrc
 
 # PGP / SSH Setup
+# Manual
 
 if [ "$LAPTOP_MODE" = true ]; then
     # Laptop power settings / TLP
@@ -78,14 +78,37 @@ if [ "$LAPTOP_MODE" = true ]; then
 fi
 
 if [ "$VM_MODE" = false ]; then
+    # PaperWM
+    mkdir ~/.local/PaperWM
     # Branch depends on gnome version
-    git clone https://github.com/paperwm/PaperWM -b gnome-3.38 ~/.local/PaperWM
+    # git clone https://github.com/paperwm/PaperWM -b gnome-3.38 ~/.local/PaperWM
+    # ~/.local/PaperWM/install.sh
+
+    # Alternatively this is a rolling release fork of PaperWM
+    git clone https://github.com/PaperWM-redux/PaperWM ~/.local/PaperWM
     ~/.local/PaperWM/install.sh
 
-    # Gnome Shell Extensions
-    sudo wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
-    chmod +x gnome-shell-extension-installer
-    sudo mv gnome-shell-extension-installer /usr/bin/
+    # Import keybinds
+    dconf reset -f /org/gnome/shell/extensions/paperwm/keybindings/
+    cat ~/configs_tmp/paperwm-keybindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
+
+    # Example for Exporting and importing PaperWM bindings
+    # 
+    # EXPORT
+    # PREV_BINDINGS=paperwm-bindings-$(date +%F_%T).txt
+    # dconf dump /org/gnome/shell/extensions/paperwm/keybindings/ > $PREV_BINDINGS
+    # 
+    # IMPORT
+    # dconf reset -f /org/gnome/shell/extensions/paperwm/keybindings/
+    # cat dwm-ish-bindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
+
+    # Other Gnome Shell Extensions
+    # sudo wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+    # chmod +x gnome-shell-extension-installer
+    # sudo mv gnome-shell-extension-installer /usr/bin/
+    # Transparent Top Bar
+    # Dash To Dock
+    # Bing Wallpaper
 fi
 
 echo "Cleaning up..."
