@@ -45,11 +45,10 @@ if [ "$VM_MODE" = false ]; then
     youtube-music-desktop-app \
 
     # VSCodium Plugins
-    codium --install-extension \
-    mhutchie.git-graph \
-    vscodevim.vim \
-    GulajavaMinistudio.mayukaithemevsc \
-    ddiu8081.moegi-theme \
+    codium --install-extension mhutchie.git-graph
+    codium --install-extension vscodevim.vim
+    codium --install-extension GitHub.github-vscode-theme
+    codium --install-extension PKief.material-icon-theme
 
     #LRZ SnS
     curl https://syncandshare.lrz.de/client_deployment/LRZ_Sync_Share_Latest_amd64.deb \
