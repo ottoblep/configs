@@ -21,6 +21,7 @@ sudo apt update -y
 sudo apt upgrade -y
 echo "Installing base packages..."
 sudo apt install -y \
+zsh \
 curl \
 git \
 vim-gtk3 \
@@ -28,6 +29,28 @@ zoxide \
 fzf \
 snapd \
 yt-dlp \
+
+# Enable zsh
+chsh -s $(which zsh)
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Importing configs..."
+
+# Setup bashrc 
+# cp -n ~/.bashrc ~/.bashrc_original
+# cp ~/.bashrc_original ~/.bashrc
+# cat ~/configs_tmp/home/.bashrc >> ~/.bashrc
+
+# Setup zshrc
+cp ~/configs_tmp/home/.zshrc ~/.zshrc
+
+# Import configs
+mkdir ~/.config
+cp -rT ~/config_tmp/.config ~/.config
+
+# PGP / SSH Setup
+# Manual
 
 if [ "$VM_MODE" = false ]; then
     echo "Installing graphics packages..."
@@ -55,18 +78,6 @@ if [ "$VM_MODE" = false ]; then
     -o /tmp/LRZ_Sync_Share_Latest_amd64.deb
     sudo apt install -y /tmp/LRZ_Sync_Share_Latest_amd64.deb
 fi
-
-
-echo "Importing configs..."
-# Import configs
-mkdir ~/.config
-# Setup bashrc 
-cp -n ~/.bashrc ~/.bashrc_original
-cp ~/.bashrc_original ~/.bashrc
-cat ~/configs_tmp/home/.bashrc >> ~/.bashrc
-
-# PGP / SSH Setup
-# Manual
 
 if [ "$LAPTOP_MODE" = true ]; then
     # Laptop power settings / TLP
