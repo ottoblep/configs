@@ -38,13 +38,13 @@ git clone https://github.com/PaperWM-redux/PaperWM ~/.local/PaperWM
 wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
 sudo chmod +x gnome-shell-extension-installer
 sudo mv gnome-shell-extension-installer /usr/bin/
-gnome-shell-extension-installer --yes 2960 # Transparent Top Bar
+gnome-shell-extension-installer --yes 3960 # Transparent Top Bar
 gnome-shell-extension-installer --yes 307 # Dash To Dock
 gnome-shell-extension-installer --yes 1262 # Bing Wallpaper
 
-# Import all gnome extension settings 
-dconf reset -f /org/gnome/shell/extensions/
-cat ~/configs/gnome-dconf-dump.txt | dconf load /org/gnome/shell/extensions/
+# Import all gnome settings 
+dconf reset -f /org/gnome/
+cat ~/configs/gnome-dconf-dump.txt | dconf load /org/gnome/
 
 # Example for Exporting and importing Gnome Extension settings
 # EXPORT

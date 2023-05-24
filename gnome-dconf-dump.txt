@@ -1,4 +1,90 @@
-[bingwallpaper]
+[desktop/calendar]
+show-weekdate=false
+
+[desktop/interface]
+clock-show-seconds=false
+clock-show-weekday=true
+color-scheme='prefer-dark'
+document-font-name='DejaVu Sans 12'
+enable-hot-corners=false
+font-antialiasing='rgba'
+font-hinting='slight'
+font-name='DejaVu Sans 11'
+gtk-theme='Cloudy-Dark-Grey'
+icon-theme='Papirus'
+monospace-font-name='DejaVu Sans Mono 12'
+show-battery-percentage=true
+text-scaling-factor=1.3
+
+[desktop/peripherals/touchpad]
+edge-scrolling-enabled=false
+speed=-0.070270270270270219
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[desktop/wm/keybindings]
+activate-window-menu=@as []
+begin-move=@as []
+begin-resize=@as []
+cycle-panels=@as []
+cycle-panels-backward=@as []
+maximize=@as []
+minimize=@as []
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-1=@as []
+move-to-workspace-last=@as []
+move-to-workspace-left=@as []
+move-to-workspace-right=@as []
+panel-run-dialog=@as []
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-panels=@as []
+switch-panels-backward=@as []
+switch-to-workspace-1=@as []
+switch-to-workspace-last=@as []
+switch-to-workspace-left=@as []
+switch-to-workspace-right=@as []
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+toggle-fullscreen=['<Super>d']
+toggle-maximized=@as []
+unmaximize=@as []
+
+[eog/ui]
+sidebar=false
+
+[nautilus/icon-view]
+default-zoom-level='small'
+
+[nautilus/list-view]
+default-zoom-level='medium'
+
+[nautilus/preferences]
+default-folder-viewer='list-view'
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[nautilus/window-state]
+initial-size=(945, 1193)
+maximized=false
+sidebar-width=204
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control><Alt>plus'
+command='alacritty'
+name='Launch Shell'
+
+[shell]
+disable-user-extensions=false
+disabled-extensions=[]
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'BingWallpaper@ineffable-gmail.com', 'dash-to-dock@micxgx.gmail.com', 'transparent-top-bar@ftpix.com', 'paperwm@hedning:matrix.org', 'paperwm@paperwm-redux.github.com']
+favorite-apps=['chromium.desktop', 'codium.desktop', 'com.github.ransome1.sleek.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'keepassxc.desktop', 'speedcrunch.desktop']
+
+[shell/extensions/bingwallpaper]
 delete-previous=true
 download-folder='~/Pictures/BingWallpaper/'
 icon-name='bing-symbolic'
@@ -6,7 +92,7 @@ lockscreen-blur-brightness=60
 lockscreen-blur-strength=2
 override-lockscreen-blur=true
 
-[dash-to-dock]
+[shell/extensions/dash-to-dock]
 animate-show-apps=true
 apply-custom-theme=false
 background-color='rgb(0,0,0)'
@@ -31,10 +117,13 @@ show-windows-preview=true
 transparency-mode='FIXED'
 workspace-agnostic-urgent-windows=true
 
-[hidetopbar]
+[shell/extensions/hibernate-status-button]
+hibernate-works-check=false
+
+[shell/extensions/hidetopbar]
 mouse-sensitive=true
 
-[paperwm]
+[shell/extensions/paperwm]
 has-installed-config-template=true
 horizontal-margin=8
 minimap-scale=0.0
@@ -47,7 +136,7 @@ vertical-margin-bottom=3
 window-gap=8
 winprops=@as []
 
-[paperwm/keybindings]
+[shell/extensions/paperwm/keybindings]
 live-alt-tab=['']
 live-alt-tab-backward=['']
 move-down=['<Control><Super>j']
@@ -69,5 +158,19 @@ switch-monitor-right=['<Shift><Super>l']
 switch-right=['<Super>l']
 switch-up=['<Super>k']
 
-[user-theme]
+[shell/extensions/user-theme]
 name='Cloudy-Dark-Grey'
+
+[shell/keybindings]
+focus-active-notification=@as []
+open-application-menu=@as []
+toggle-application-view=@as []
+toggle-message-tray=@as []
+toggle-overview=@as []
+
+[shell/weather]
+automatic-location=true
+locations=@av []
+
+[shell/world-clocks]
+locations=@av []
