@@ -17,7 +17,7 @@ git \
 vim-gtk3 \
 zoxide \
 fzf \
-yt-dlp \
+yt-dlp
 
 # Enable zsh
 chsh -s $(which zsh)

@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	autocrlf = true
+	# autocrlf = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
