@@ -21,8 +21,3 @@ VSCode Navigation
 
 Launch new Terminal
 	Ctrl + Alt + Plus
-	
-
-For Detailed:
-  https://github.com/paperwm/PaperWM
-  gTile s.h. Settings

@@ -24,7 +24,7 @@ curl https://syncandshare.lrz.de/client_deployment/LRZ_Sync_Share_Latest_amd64.d
 -o /tmp/LRZ_Sync_Share_Latest_amd64.deb
 sudo apt install -y /tmp/LRZ_Sync_Share_Latest_amd64.deb
 
-# PaperWM
+# Install PaperWM
 mkdir ~/.local/PaperWM
 # Branch depends on gnome version
 # git clone https://github.com/paperwm/PaperWM -b gnome-3.38 ~/.local/PaperWM
@@ -34,24 +34,22 @@ mkdir ~/.local/PaperWM
 git clone https://github.com/PaperWM-redux/PaperWM ~/.local/PaperWM
 ~/.local/PaperWM/install.sh
 
-# Import keybinds
-dconf reset -f /org/gnome/shell/extensions/paperwm/keybindings/
-cat ~/configs_tmp/paperwm-keybindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
+# Install other Gnome Shell Extensions
+wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
+sudo chmod +x gnome-shell-extension-installer
+sudo mv gnome-shell-extension-installer /usr/bin/
+gnome-shell-extension-installer --yes 2960 # Transparent Top Bar
+gnome-shell-extension-installer --yes 307 # Dash To Dock
+gnome-shell-extension-installer --yes 1262 # Bing Wallpaper
 
-# Example for Exporting and importing PaperWM bindings
-# 
+# Import all gnome extension settings 
+dconf reset -f /org/gnome/shell/extensions/
+cat ~/configs/gnome-dconf-dump.txt | dconf load /org/gnome/shell/extensions/
+
+# Example for Exporting and importing Gnome Extension settings
 # EXPORT
-# PREV_BINDINGS=paperwm-bindings-$(date +%F_%T).txt
-# dconf dump /org/gnome/shell/extensions/paperwm/keybindings/ > $PREV_BINDINGS
-# 
+# dconf dump /org/gnome/shell/extensions/ > dump.txt 
 # IMPORT
-# dconf reset -f /org/gnome/shell/extensions/paperwm/keybindings/
-# cat dwm-ish-bindings.txt | dconf load /org/gnome/shell/extensions/paperwm/keybindings/
-
-# Other Gnome Shell Extensions
-# sudo wget -O gnome-shell-extension-installer "https://github.com/brunelli/gnome-shell-extension-installer/raw/master/gnome-shell-extension-installer"
-# chmod +x gnome-shell-extension-installer
-# sudo mv gnome-shell-extension-installer /usr/bin/
-# Transparent Top Bar
-# Dash To Dock
-# Bing Wallpaper
+# cat dump.txt | dconf load /org/gnome/shell/extensions/
+# RESET
+# dconf reset -f /org/gnome/shell/extensions/
