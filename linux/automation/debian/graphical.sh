@@ -13,6 +13,8 @@ sleek \
 drawio \
 youtube-music-desktop-app
 
+# TODO Add vimium addon for chrome/firefox
+
 # VSCodium Plugins
 codium --install-extension mhutchie.git-graph
 codium --install-extension vscodevim.vim
