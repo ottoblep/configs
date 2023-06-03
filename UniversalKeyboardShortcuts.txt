@@ -4,10 +4,8 @@ Keyboard Shortcuts
   		Super + hjkl 
   	Move Window
 		Ctrl+Super+hjkl
-  	Toggle Fullscreen
+  	Toggle Fullscreen / Maximize
   		Super + D
-  	Toggle maximize window
-		Super + Shift + D
   	Toggle floating window
 		Super + T
   	Close Window
@@ -39,6 +37,7 @@ On Debian use Gnome + PaperWM:
 	disable all gnome shortcuts with super key and gnome tiling shortcuts 
 On Windows use Komorebi: 
 	Alt key is super key / default shortcuts still work
+	Launch Programs with Win+S dmenu style
 
 
 VSCode Navigation

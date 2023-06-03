@@ -44,7 +44,7 @@ gnome-shell-extension-installer --yes 1262 # Bing Wallpaper
 
 # Import all gnome settings 
 dconf reset -f /org/gnome/
-cat ~/configs/gnome-dconf-dump.txt | dconf load /org/gnome/
+cat ~/configs/linux/gnome-dconf-dump.txt | dconf load /org/gnome/
 
 # Example for Exporting and importing Gnome Extension settings
 # EXPORT

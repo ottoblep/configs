@@ -25,7 +25,7 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended" 
 
 echo "Importing configs..."
-cp -rT ~/configs/home ~
+cp -rT ~/configs/linux/home ~
 
 # PGP / SSH Setup
 # Manual
