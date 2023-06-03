@@ -23,15 +23,15 @@ komorebic ensure-named-workspaces 0 I II III IV V
 komorebic named-workspace-layout I bsp
 
 # Set the gaps around the edge of the screen for a workspace
-# komorebic named-workspace-padding I 3 
+komorebic named-workspace-padding I 3 
 # Set the gaps between the containers for a workspace
-# komorebic named-workspace-container-padding I 3 
+komorebic named-workspace-container-padding I 3 
 
 # You can assign specific apps to named workspaces
 # komorebic named-workspace-rule exe "Firefox.exe" III
 
 # Configure the invisible border dimensions
-komorebic invisible-borders 3 3 3 3 
+# komorebic invisible-borders 3 3 3 3 
 
 # Uncomment the next lines if you want a visual border around the active window
 # komorebic active-window-border-colour 66 165 245 --window-kind single
