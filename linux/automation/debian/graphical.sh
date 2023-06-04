@@ -5,8 +5,8 @@ chromium \
 keepassxc \
 thunderbird \
 xournalpp \
-speedcrunch
-sudo snap install codium --classic
+speedcrunch\
+codium
 sudo snap install alacritty --classic
 sudo snap install \
 sleek \
